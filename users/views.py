@@ -12,7 +12,7 @@ def custom_login(request):
         if user:
             login(request, user)
             # Redirect to home or any desired page upon successful login
-            return redirect('home')
+            return redirect('uhome')
 
     return render(request, 'users/login.html')
 
@@ -29,13 +29,13 @@ def custom_register(request):
         if User.objects.filter(username=username).exists() :
             # Handle the case where the user already exists
             # You might want to show an error message or redirect to a different page
-            return redirect('home')  # Replace with the desired behavior for existing users
+            return redirect('home_page')  # Replace with the desired behavior for existing users
 
         # Check if passwords match
         if password != confirm_password:
             # Handle the case where passwords do not match
             # You might want to show an error message or redirect to a different page
-            return redirect('home')  # Replace with the desired behavior for password mismatch
+            return redirect('home_page')  # Replace with the desired behavior for password mismatch
 
         # Create a new user
         user = User.objects.create_user(username=username, email=email, password=password)
@@ -52,3 +52,8 @@ def custom_register(request):
 def home(request):
   return render(request , 'users/home.html')
 
+def ucard(request):
+  pass
+
+def contact(request):
+  pass
