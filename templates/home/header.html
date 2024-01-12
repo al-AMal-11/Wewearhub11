@@ -1,0 +1,36 @@
+{% load static %}
+<!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="{% url 'home_page' %}" class="logo">
+                            <img src="{% static 'home/assets/images/logo.png'%}">
+                        </a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <li class="scroll-to-section"><a href="{% url 'home_page' %}#top" class="active">Home</a></li>
+                            <li class="scroll-to-section"><a href="{% url 'home_page' %}#men">Men's</a></li>
+                            <li class="scroll-to-section"><a href="{% url 'home_page' %}#women">Women's</a></li>
+                            <li class="scroll-to-section"><a href="{% url 'home_page' %}#kids">Kid's</a></li>
+                           
+                                
+                            <li><a href="{% url 'about_page' %}">About Us</a></li>
+                              
+                            <li><a href="{% url 'contacts_page' %}">Contact Us</a></li>
+                            <li><a href="{% url 'login' %}">Login</a></li>
+                            
+                        </ul>
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
